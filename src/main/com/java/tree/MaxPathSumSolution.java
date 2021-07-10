@@ -47,7 +47,7 @@ public class MaxPathSumSolution {
     @Test
     public void test() {
         //[9,3,15,20,7]
-        TreeNode root = new TreeNode(3);
+        TreeNode root = new TreeNode(-10);
         TreeNode left1 = new TreeNode(9);
         TreeNode right1 = new TreeNode(15);
         TreeNode right1Left = new TreeNode(20);
