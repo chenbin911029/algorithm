@@ -1,5 +1,7 @@
 package main.com.java.tree;
 
+import org.junit.Test;
+
 /**
  * 树
  */
@@ -9,6 +11,20 @@ public class Tree {
         int val;
         TreeNode left,right;
     }
+
+    @Test
+    public void testInorder() {
+        TreeNode root = new TreeNode();
+        root.val = 3;
+        TreeNode left = new TreeNode();
+        left.val = 1;
+        TreeNode leftChildRight = new TreeNode();
+        leftChildRight.val = 2;
+        root.left = left;
+        left.right = leftChildRight;
+        inOrder(root);
+    }
+
 
     /**
      * 先序遍历
