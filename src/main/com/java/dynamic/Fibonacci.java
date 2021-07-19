@@ -2,7 +2,6 @@ package main.com.java.dynamic;
 import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
 
 /**
  * 斐波那契数列
@@ -11,9 +10,9 @@ public class Fibonacci {
     /**
      * 1.递归解法
      */
-    int fibonacciRecursion(int n) {
+    int fibRecursion(int n) {
         if (n == 1 || n == 2) return 1;
-        return fibonacciRecursion(n-1) + fibonacciRecursion(n-2);
+        return fibRecursion(n-1) + fibRecursion(n-2);
     }
 
     /**
@@ -49,6 +48,23 @@ public class Fibonacci {
     }
 
     /**
+     * 4.空间复杂度降为O(1)
+     * 只记pre,cur，每次得到sum向前移一位
+     */
+    int fibO1(int n) {
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+        int pre = 1,cur = 1;
+        for (int i = 3; i <=n; i++) {
+            int sum = pre + cur;
+            pre = cur;
+            cur = sum;
+        }
+        return cur;
+    }
+
+    /**
      * 递归算法的时间复杂度计算
      * 子问题个数 * 解决一个子问题需要的时间
      * 二叉树节点总数为指数级别
@@ -65,11 +81,13 @@ public class Fibonacci {
     @Test
     public void test() {
         System.out.println(System.currentTimeMillis());
-        System.out.println(fibonacciRecursion(40));
+        System.out.println(fibRecursion(40));
         System.out.println(System.currentTimeMillis());
         System.out.println(fibWithMap(40));
         System.out.println(System.currentTimeMillis());
         System.out.println(fibDP(40));
+        System.out.println(System.currentTimeMillis());
+        System.out.println(fibO1(40));
         System.out.println(System.currentTimeMillis());
     }
 }
