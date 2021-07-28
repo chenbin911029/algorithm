@@ -20,17 +20,22 @@ public class FullPermutation {
     }
 
     void backtrack(int[] nums, LinkedList<Integer> track, List<List<Integer>> res) {
-        //终止条件
+        //满足终止条件
         if (track.size() == nums.length) {
             res.add(new LinkedList<>(track));
             return;
         }
+        //选择列表
         for (int num : nums) {
+            //排除
             if (track.contains(num)) {
                 continue;
             }
+            //做选择
             track.add(num);
+            //回溯
             backtrack(nums, track, res);
+            //撤销选择
             track.removeLast();
         }
     }
