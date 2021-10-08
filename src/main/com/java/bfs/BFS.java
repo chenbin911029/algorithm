@@ -1,7 +1,5 @@
 package main.com.java.bfs;
 
-import org.apache.commons.collections.CollectionUtils;
-
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
