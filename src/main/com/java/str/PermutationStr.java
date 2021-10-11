@@ -3,6 +3,9 @@ package main.com.java.str;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * leetCode 567, 字符串的排列
+ */
 public class PermutationStr {
     public boolean checkInclusion(String s1, String s2) {
         //数据字典ori，记录目标字符串的k,v
@@ -46,4 +49,5 @@ public class PermutationStr {
         }
         return false;
     }
+
 }
