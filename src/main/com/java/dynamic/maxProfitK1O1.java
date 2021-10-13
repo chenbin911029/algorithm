@@ -1,7 +1,7 @@
 package main.com.java.dynamic;
 
 /**
- * leetCode 121. 买卖股票的最佳时机，时间复杂度O(1)
+ * leetCode 121. 买卖股票的最佳时机，k=1,时间复杂度O(1)
  */
 public class maxProfitK1O1 {
     public int maxProfit(int[] prices) {
