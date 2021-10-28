@@ -1,4 +1,4 @@
-package main.com.java.dynamic;
+package main.com.java.dynamic.maxprofit;
 /**
  * leetCode 309. 最佳买卖股票时机含冷冻期,k为任意正整数
  */

@@ -1,4 +1,4 @@
-package main.com.java.dynamic;
+package main.com.java.dynamic.maxprofit;
 /**
  * leetCode 122. 买卖股票的最佳时机,k=正无穷,空间复杂度O(1)
  */

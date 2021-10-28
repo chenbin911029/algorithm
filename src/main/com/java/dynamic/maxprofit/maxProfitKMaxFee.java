@@ -1,4 +1,4 @@
-package main.com.java.dynamic;
+package main.com.java.dynamic.maxprofit;
 /**
  * leetCode 714. 买卖股票的最佳时机含手续费,k=任意正整数
  */

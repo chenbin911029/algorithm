@@ -1,4 +1,4 @@
-package main.com.java.dynamic;
+package main.com.java.dynamic.maxprofit;
 
 /**
  * leetCode 121. 买卖股票的最佳时机,k=2

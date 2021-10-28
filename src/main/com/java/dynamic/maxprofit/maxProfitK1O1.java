@@ -1,9 +1,9 @@
-package main.com.java.dynamic;
+package main.com.java.dynamic.maxprofit;
 
 /**
- * leetCode 121. 买卖股票的最佳时机,k=1
+ * leetCode 121. 买卖股票的最佳时机，k=1,时间复杂度O(1)
  */
-public class maxProfitK1 {
+public class maxProfitK1O1 {
     public int maxProfit(int[] prices) {
         /**
          * 二维数组 dp[i][2]表示第i天的两种状态
@@ -11,21 +11,17 @@ public class maxProfitK1 {
          * dp[i][1] 表示 第i天手中持有股票
          */
         int n = prices.length;
-        int[][] dp = new int[n][2];
+//        int[][] dp = new int[n][2];
+        int dp_i_0 = 0;
+        int dp_i_1 = Integer.MIN_VALUE;
         for (int i = 0;i < n;i++) {
-            //base case,i=0时，i-1 = -1
-            if (i-1 == -1) {
-                //i = 0;
-                dp[i][0] = 0;
-                dp[i][1] = -prices[i];
-                continue;
-            }
-
-            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1]+prices[i]);
-            dp[i][1] = Math.max(dp[i-1][1],-prices[i]);
+//            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1]+prices[i]);
+            dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);
+//            dp[i][1] = Math.max(dp[i-1][1],-prices[i]);
+            dp_i_1 = Math.max(dp_i_1, -prices[i]);
         }
         //最后一天不持有股票
-        return dp[n-1][0];
+        return dp_i_0;
     }
 }
 /**

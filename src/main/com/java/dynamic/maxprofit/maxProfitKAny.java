@@ -1,4 +1,4 @@
-package main.com.java.dynamic;
+package main.com.java.dynamic.maxprofit;
 
 /**
  * leetCode 188 买卖股票的最佳时机 IV(k=任意正整数)
